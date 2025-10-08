@@ -1,1 +1,202 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sai Teja Bathula — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cybersecurity, Cloud/Kubernetes, IT Governance, and Database projects by Sai Teja Bathula." />
+  <!-- Open Graph for nice link previews -->
+  <meta property="og:title" content="Sai Teja Bathula — Portfolio">
+  <meta property="og:description" content="Cybersecurity, Cloud/Kubernetes, IT Governance, and Database projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saiteja-02.github.io/">
+  <style>
+    :root{
+      --bg:#0f1220; --card:#151933; --muted:#9aa3b2; --text:#e6e9f0; --accent:#6aa7ff; --accent-2:#7bd7c9;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      background:linear-gradient(180deg,#0d1020 0%, #0f1220 100%); color:var(--text);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{opacity:.9}
+    .wrap{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter: blur(6px);
+      background:rgba(15,18,32,.7); border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    nav .brand{font-weight:700; letter-spacing:.3px}
+    nav .links a{margin-left:16px; font-size:14px}
+    .hero{padding:64px 0 24px}
+    .hero h1{font-size:32px; margin:0 0 12px}
+    .hero p{margin:0 0 18px; color:var(--muted); max-width:780px; line-height:1.6}
+    .cta a{
+      display:inline-block; background:var(--accent); color:#091325; padding:10px 16px; border-radius:10px; font-weight:600;
+      border:1px solid transparent;
+    }
+    .cta a.secondary{background:transparent; color:var(--text); border-color:rgba(255,255,255,.15); margin-left:12px}
+    h2.section{margin:28px 0 10px; font-size:22px}
+    .grid{
+      display:grid; gap:16px; grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      grid-column: span 12;
+      background:linear-gradient(180deg, #161a36 0%, #11142b 100%);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px; padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:18px}
+    .card p{margin:6px 0; color:var(--muted); line-height:1.6}
+    .tags{margin:10px 0 12px}
+    .tag{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.12); margin:0 8px 8px 0; color:#cbd5e1}
+    .actions a{
+      display:inline-block; margin-right:12px; margin-top:4px; border:1px solid rgba(255,255,255,.16);
+      padding:8px 12px; border-radius:10px; font-weight:600; color:#e6e9f0;
+    }
+    footer{padding:36px 0 56px; color:var(--muted); font-size:14px}
+    /* Responsive */
+    @media(min-width:720px){
+      .hero h1{font-size:38px}
+      .card{grid-column: span 6}
+      .card.feature{grid-column: span 12}
+    }
+    @media(min-width:980px){
+      .card{grid-column: span 4}
+      .card.feature{grid-column: span 8}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">Sai Teja Bathula</div>
+        <div class="links">
+          <a href="#projects">Projects</a>
+          <a href="/assets/resume/SaiTeja_Bathula_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Cybersecurity • Cloud/Kubernetes • IT Governance</h1>
+      <p>
+        I turn complex security and cloud problems into clear, workable solutions—ranging from web application
+        penetration testing (OWASP Top 10) and Kubernetes on AWS, to ISO-aligned IT/AI governance in the public sector,
+        and relational database design in SQLite (1NF–3NF).
+      </p>
+      <div class="cta">
+        <a href="/assets/resume/SaiTeja_Bathula_Resume.pdf" target="_blank" rel="noopener">📄 View Resume</a>
+        <a class="secondary" href="https://github.com/Saiteja-02" target="_blank" rel="noopener">⭐ GitHub Profile</a>
+      </div>
+    </section>
+
+    <h2 id="projects" class="section">Featured Projects</h2>
+    <section class="grid">
+      <!-- Project: Web App Security – XSS & SQLi -->
+      <article class="card">
+        <h3>Web App Security — XSS & SQL Injection</h3>
+        <p>Hands-on penetration testing in a controlled lab using Burp Suite & SQLMap; aligned with OWASP Top 10.</p>
+        <div class="tags">
+          <span class="tag">XSS</span><span class="tag">SQLi</span><span class="tag">Burp Suite</span><span class="tag">SQLMap</span><span class="tag">Kali</span>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/Saiteja-02/web-app-security-xss-sql-injection" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="/assets/projects/Web_App_Security_XSS_SQLi_Scenario.pdf" target="_blank" rel="noopener">Scenario PDF</a>
+        </div>
+      </article>
+
+      <!-- Project: Web App Penetration Testing (multi vulns) -->
+      <article class="card">
+        <h3>Web App Penetration Testing — Vulnerability Assessment</h3>
+        <p>Identified SQLi, IDOR, file upload, and access control flaws; documented risks and remediation aligned to OWASP Top 10/PTES.</p>
+        <div class="tags">
+          <span class="tag">OWASP Top 10</span><span class="tag">PTES</span><span class="tag">Burp Suite</span><span class="tag">Gobuster</span>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/Saiteja-02" target="_blank" rel="noopener">Repo (if applicable)</a>
+          <a href="/assets/projects/Web_App_Penetration_Testing_Scenario.pdf" target="_blank" rel="noopener">Scenario PDF</a>
+        </div>
+      </article>
+
+      <!-- Project: AWS EKS Deployment -->
+      <article class="card">
+        <h3>AWS EKS Deployment</h3>
+        <p>Provisioned Amazon EKS via <code>eksctl</code> and AWS CLI; IAM trust policies; YAML/JSON IaC templates.</p>
+        <div class="tags">
+          <span class="tag">EKS</span><span class="tag">Kubernetes</span><span class="tag">IAM</span><span class="tag">IaC</span>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/Saiteja-02/aws-eks-deployment" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <!-- Project: Kubernetes with kOps -->
+      <article class="card">
+        <h3>Kubernetes Cluster with kOps (AWS)</h3>
+        <p>Deployed Kubernetes on AWS EC2 using kOps with Route53 + S3 state store; declarative lifecycle management.</p>
+        <div class="tags">
+          <span class="tag">kOps</span><span class="tag">EC2/VPC</span><span class="tag">Route53</span><span class="tag">S3</span>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/Saiteja-02/kubernetes-Kops" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+
+      <!-- Project: AI Governance -->
+      <article class="card">
+        <h3>AI Governance for Public Sector — Cognitive Bias</h3>
+        <p>Debiasing techniques + ISO/IEC 38507 alignment for responsible AI in government; policy and assurance recommendations.</p>
+        <div class="tags">
+          <span class="tag">ISO/IEC 38507</span><span class="tag">AI Assurance</span><span class="tag">Governance</span>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/Saiteja-02/ai-it-governance-vic-gov" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="/assets/projects/AI_Governance_IT_Scenario_Aligned.pdf" target="_blank" rel="noopener">Scenario PDF</a>
+        </div>
+      </article>
+
+      <!-- Project: Database Implementation -->
+      <article class="card feature">
+        <h3>COVID-19 Vaccination Database (SQLite)</h3>
+        <p>Designed 3NF schema from OWID CSVs; implemented in SQLite; analytical SQL queries; schema & queries included below.</p>
+        <div class="tags">
+          <span class="tag">SQLite</span><span class="tag">SQL</span><span class="tag">ERD</span><span class="tag">1NF–3NF</span>
+        </div>
+        <div class="actions">
+          <a href="https://github.com/Saiteja-02/covid-vaccination-database-project" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="/assets/projects/COVID19_Vaccination_Database_Project_Scenario_NoViz.pdf" target="_blank" rel="noopener">Scenario PDF</a>
+          <!-- Link your DB artifacts here -->
+          <a href="/assets/projects/database/Database.sql" target="_blank" rel="noopener">Schema (SQL)</a>
+          <a href="/assets/projects/database/Queries.sql" target="_blank" rel="noopener">Queries (SQL)</a>
+          <!-- If DB file is small (<50MB), link it. Otherwise keep .sql dump -->
+          <a href="/assets/projects/database/Vaccinations.db" target="_blank" rel="noopener">Download DB</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2 class="section">Contact</h2>
+      <p class="muted">Open to roles in cybersecurity, cloud/Kubernetes, and IT/AI governance.</p>
+      <p>
+        <a href="mailto:your.email@example.com">your.email@example.com</a> ·
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/Saiteja-02" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="y"></span> Sai Teja Bathula. Built with GitHub Pages.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
