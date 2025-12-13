@@ -4,40 +4,69 @@
   <meta charset="utf-8" />
   <title>Sai Teja Bathula — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Cybersecurity, Cloud/Kubernetes, IT/AI Governance, and Database projects by Sai Teja Bathula." />
+  <meta name="description" content="Cybersecurity, Cloud Security, Governance, and technical projects by Sai Teja Bathula." />
   <style>
     :root{ --bg:#0f1220; --card:#151933; --muted:#9aa3b2; --text:#e6e9f0; --accent:#6aa7ff; }
     *{box-sizing:border-box}
-    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
-          background:linear-gradient(180deg,#0d1020 0%, #0f1220 100%); color:var(--text); }
-    a{ color:var(--accent); text-decoration:none } a:hover{ opacity:.9 }
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#0d1020 0%, #0f1220 100%);
+      color:var(--text);
+    }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ opacity:.9 }
     .wrap{ max-width:1100px; margin:0 auto; padding:0 20px }
-    header{ position:sticky; top:0; z-index:10; backdrop-filter:blur(6px);
-            background:rgba(15,18,32,.7); border-bottom:1px solid rgba(255,255,255,.06) }
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter:blur(6px);
+      background:rgba(15,18,32,.7); border-bottom:1px solid rgba(255,255,255,.06)
+    }
     nav{ display:flex; align-items:center; justify-content:space-between; height:64px }
     nav .brand{ font-weight:700; letter-spacing:.3px }
     nav .links a{ margin-left:16px; font-size:14px }
+
     .hero{ padding:64px 0 24px }
     .hero h1{ font-size:32px; margin:0 0 12px }
     .hero p{ margin:0 0 18px; color:var(--muted); max-width:840px; line-height:1.6 }
-    .cta a{ display:inline-block; background:var(--accent); color:#091325; padding:10px 16px; border-radius:10px; font-weight:600; border:1px solid transparent }
-    .cta a.secondary{ background:transparent; color:var(--text); border-color:rgba(255,255,255,.15); margin-left:12px }
+    .cta a{
+      display:inline-block; background:var(--accent); color:#091325;
+      padding:10px 16px; border-radius:10px; font-weight:600;
+      border:1px solid transparent
+    }
+    .cta a.secondary{
+      background:transparent; color:var(--text);
+      border-color:rgba(255,255,255,.15); margin-left:12px
+    }
 
     h2.section{ margin:28px 0 10px; font-size:22px }
     .grid{ display:grid; gap:16px; grid-template-columns:repeat(12,1fr) }
-    .card{ grid-column:span 12; background:linear-gradient(180deg,#161a36 0%, #11142b 100%);
-           border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:18px }
+    .card{
+      grid-column:span 12;
+      background:linear-gradient(180deg,#161a36 0%, #11142b 100%);
+      border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:18px
+    }
     .card h3{ margin:0 0 8px; font-size:18px }
     .card p{ margin:6px 0; color:var(--muted); line-height:1.6 }
     .muted{ color:var(--muted) }
 
     .tags{ margin:10px 0 8px }
-    .tag{ display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.12); margin:0 8px 8px 0; color:#cbd5e1 }
+    .tag{
+      display:inline-block; font-size:12px; padding:4px 8px;
+      border-radius:999px; border:1px solid rgba(255,255,255,.12);
+      margin:0 8px 8px 0; color:#cbd5e1
+    }
 
-    .actions a{ display:inline-block; margin-right:12px; margin-top:4px; border:1px solid rgba(255,255,255,.16);
-                padding:8px 12px; border-radius:10px; font-weight:600; color:#e6e9f0 }
+    .actions a{
+      display:inline-block; margin-right:12px; margin-top:4px;
+      border:1px solid rgba(255,255,255,.16);
+      padding:8px 12px; border-radius:10px;
+      font-weight:600; color:#e6e9f0
+    }
 
-    .item{ display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06) }
+    .item{
+      display:flex; align-items:flex-start; gap:12px;
+      padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06)
+    }
     .item:last-child{ border-bottom:none }
     .item .left{ min-width:160px; color:#cbd5e1; font-size:13px }
     .item .right h4{ margin:0 0 4px; font-size:16px }
@@ -45,9 +74,27 @@
 
     footer{ padding:36px 0 56px; color:var(--muted); font-size:14px }
 
-    /* Responsive */
-    @media(min-width:720px){ .hero h1{font-size:38px} .card{grid-column:span 6} .card.feature{grid-column:span 12} }
-    @media(min-width:980px){ .card{grid-column:span 4} .card.feature{grid-column:span 8} }
+    .cert-badges{
+      margin-top:8px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .cert-badges img{
+      height:60px;
+      border-radius:6px;
+    }
+
+    @media(min-width:720px){
+      .hero h1{font-size:38px}
+      .card{grid-column:span 6}
+      .card.feature{grid-column:span 12}
+    }
+    @media(min-width:980px){
+      .card{grid-column:span 4}
+      .card.feature{grid-column:span 8}
+    }
   </style>
 </head>
 <body>
@@ -71,21 +118,25 @@
   </header>
 
   <main class="wrap">
-    <!-- About -->
+
+    <!-- ⭐ UPDATED HERO SECTION ⭐ -->
     <section class="hero" id="about">
-      <h1>Cybersecurity • Cloud/Kubernetes • IT/AI Governance • Data</h1>
+      <h1>Cyber Security • Cloud Security (AWS) • Governance & Risk Management</h1>
       <p>
-        I turn complex security and cloud problems into clear, workable solutions—ranging from web application
-        penetration testing (OWASP Top 10) and Kubernetes on AWS, to ISO-aligned IT/AI governance in the public sector,
-        and relational database design in SQLite (1NF–3NF).
+        I’m a cyber security and cloud security professional, currently working at Myer’s National Distribution Centre in a
+        systems operator role while building towards a SOC / Cyber Security Analyst position. I specialise in security analysis,
+        AWS security, and governance—ranging from web application security and AWS infrastructure hardening to ISO-aligned
+        IT/AI governance and risk management. I also build practical projects across penetration testing, cloud architectures,
+        and database design.
       </p>
       <div class="cta">
         <a href="/assets/resume/SaiTeja_Bathula_Resume.pdf" target="_blank" rel="noopener">📄 View Resume</a>
         <a class="secondary" href="https://github.com/Saiteja-02" target="_blank" rel="noopener">⭐ GitHub Profile</a>
       </div>
     </section>
+    <!-- END HERO -->
 
-          <!-- Skills -->
+    <!-- Skills -->
     <h2 id="skills" class="section">Skills</h2>
     <section class="grid">
       <article class="card">
@@ -93,12 +144,12 @@
         <div class="tags">
           <span class="tag">ISO 27001</span><span class="tag">NIST CSF</span><span class="tag">Essential Eight</span>
           <span class="tag">Risk Assessment</span><span class="tag">Incident Response</span><span class="tag">MITRE ATT&CK</span>
-          <span class="tag">Key Management (KMS)</span><span class="tag">Encryption & PKI</span>
+          <span class="tag">Key Management (KMS)</span><span class="tag">Encryption &amp; PKI</span>
         </div>
       </article>
 
       <article class="card">
-        <h3>Cloud & Platforms</h3>
+        <h3>Cloud &amp; Platforms</h3>
         <div class="tags">
           <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Kubernetes</span>
           <span class="tag">Docker</span><span class="tag">VMware vSphere</span><span class="tag">M365/Intune</span>
@@ -110,12 +161,12 @@
         <h3>Networking</h3>
         <div class="tags">
           <span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">DHCP</span>
-          <span class="tag">Routing & Switching</span><span class="tag">LAN/WAN</span>
+          <span class="tag">Routing &amp; Switching</span><span class="tag">LAN/WAN</span>
           <span class="tag">Cisco ASA / Firewalls</span><span class="tag">Cisco Wireless</span>
           <span class="tag">VPN</span><span class="tag">IDS/IPS</span><span class="tag">Zero Trust</span>
           <span class="tag">Network Segmentation</span><span class="tag">Email Security (SPF/DKIM/DMARC)</span>
           <span class="tag">F5 Load Balancers</span><span class="tag">Proxies</span>
-          <span class="tag">SSL/TLS & Certificate Management</span><span class="tag">Network Monitoring</span>
+          <span class="tag">SSL/TLS &amp; Certificate Management</span><span class="tag">Network Monitoring</span>
           <span class="tag">SDN</span>
         </div>
       </article>
@@ -129,7 +180,7 @@
       </article>
 
       <article class="card">
-        <h3>DevOps & Infra</h3>
+        <h3>DevOps &amp; Infra</h3>
         <div class="tags">
           <span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">CI/CD</span>
           <span class="tag">Git/GitHub</span><span class="tag">Linux</span><span class="tag">Windows Server</span>
@@ -138,14 +189,13 @@
       </article>
 
       <article class="card">
-        <h3>Programming & Data</h3>
+        <h3>Programming &amp; Data</h3>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">Bash</span><span class="tag">Java</span>
           <span class="tag">SQL</span><span class="tag">SQLite</span>
         </div>
       </article>
     </section>
-
 
     <!-- Certifications -->
     <h2 id="certs" class="section">Certifications</h2>
@@ -154,68 +204,119 @@
         <div class="left">Current</div>
         <div class="right">
           <h4>AWS Certified Solutions Architect (Associate)</h4>
-          <p class="muted">Designing distributed systems, security, IAM, VPC, scaling & cost-optimised architectures.</p>
+          <p class="muted">
+            Designing distributed systems, security, IAM, VPC, scaling &amp; cost-optimised architectures.
+          </p>
+          <div class="cert-badges">
+            <a href="https://www.credly.com/badges/79785724-a2b5-43a2-8181-6cd2ddb2c50d/public_url" target="_blank" rel="noopener">
+              <img src="https://images.credly.com/size/340x340/images/0c6aef6b-022d-4f53-b9b0-9d06e5d33bcc/image.png"
+                   alt="AWS Certified Solutions Architect – Associate Badge">
+            </a>
+          </div>
         </div>
       </div>
+
       <div class="item">
         <div class="left">Current</div>
         <div class="right">
-          <h4>CompTIA Security+</h4>
-          <p class="muted">Core security operations, risk, identity & access management, and incident response.</p>
+          <h4>RMIT WIL Ready Certification</h4>
+          <p class="muted">Demonstrated workplace readiness skills aligned with industry expectations.</p>
+          <div class="cert-badges">
+            <a href="https://www.credly.com/badges/5f9ef9bc-5741-45e5-b51e-3f3cd289882d/public_url" target="_blank" rel="noopener">
+              <img src="https://images.credly.com/size/340x340/images/86c734c3-0f61-4c7b-bf19-1cab09a805d0/image.png"
+                   alt="RMIT WIL Ready Badge">
+            </a>
+          </div>
         </div>
       </div>
-      <!-- Add more certs as needed -->
+
+      <div class="item">
+        <div class="left">Current</div>
+        <div class="right">
+          <h4>RMIT Academic Integrity Certification</h4>
+          <p class="muted">Certified in academic integrity principles, responsible research, and ethical standards.</p>
+          <div class="cert-badges">
+            <a href="https://www.credly.com/badges/9e9d0842-5931-4cb0-b1bf-d585df724cef/public_url" target="_blank" rel="noopener">
+              <img src="https://images.credly.com/size/340x340/images/7a222540-26c0-4674-ab91-ad84b3a51723/image.png"
+                   alt="RMIT Academic Integrity Badge">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience -->
     <h2 id="experience" class="section">Employment History</h2>
     <section class="card">
       <div class="item">
+        <div class="left">2025 – Present</div>
+        <div class="right">
+          <h4>Warehouse Team Member / Systems Operator — Myer National Distribution Centre</h4>
+          <p class="muted">
+            Monitor and operate RMS robotics (Geek+ &amp; Kober), UCS (Ferag) and INFIOS WMS in a large-scale automated
+            distribution environment. Perform first-level incident triage across automation systems, analyse logs and
+            AWS QuickSight dashboards to identify bottlenecks, support incident response, and optimise throughput and uptime.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
         <div class="left">2023 – 2025</div>
         <div class="right">
           <h4>Cybersecurity Analyst — IFFA</h4>
-          <p class="muted">Network monitoring & threat detection; security tooling (Defender, Sentinel, Splunk); risk assessments; policy & awareness; audits and compliance support.</p>
+          <p class="muted">
+            Supported migration from GoDaddy to AWS by configuring secure services (S3, CloudFront, IAM, VPC, KMS, Amplify),
+            managing SSL/TLS certificates and DNS, performing Qualys vulnerability scans and contributing to remediation,
+            while gaining SOC-style experience reviewing logs, investigating abnormal events, and practising alert analysis
+            using Splunk, Microsoft Defender and SentinelOne.
+          </p>
         </div>
       </div>
+
       <div class="item">
         <div class="left">2019 – 2023</div>
         <div class="right">
           <h4>Software Engineer — InsertV Consulting</h4>
-          <p class="muted">Automation (Ansible/Terraform/Jenkins), containerisation (Docker/Kubernetes), AWS/Azure infra, scripting, monitoring, and CI/CD.</p>
+          <p class="muted">
+            Automation (Ansible/Terraform/Jenkins), containerisation (Docker/Kubernetes),
+            AWS/Azure infrastructure, scripting, monitoring, and CI/CD.
+          </p>
         </div>
       </div>
-      <!-- Add earlier roles if needed -->
     </section>
 
-        <!-- Education -->
+    <!-- Education -->
     <h2 id="education" class="section">Education</h2>
     <section class="card">
       <div class="item">
-        <div class="left">2023 - 2025</div>
+        <div class="left">2023 – 2025</div>
         <div class="right">
           <h4>Master’s in Cybersecurity</h4>
-          <p class="muted">Key coursework: Governance & Risk, Ethical Hacking, Cloud Security, Digital Risk Management.</p>
+          <p class="muted">
+            Key coursework: Governance &amp; Risk, Ethical Hacking, Cloud Security, Digital Risk Management.
+          </p>
         </div>
       </div>
+
       <div class="item">
-        <div class="left">2016 - 20219</div>
+        <div class="left">2016 – 2019</div>
         <div class="right">
           <h4>Bachelor’s in Electrical and Electronics Engineering (EEE)</h4>
-          <p class="muted">Foundations in circuits & electronics, digital systems, embedded/IoT, control systems, signals, and power—bridging into systems engineering, networking fundamentals, and automation relevant to cybersecurity.</p>
+          <p class="muted">
+            Foundations in circuits &amp; electronics, digital systems, embedded/IoT, control systems, signals, and power—
+            bridging into systems engineering, networking fundamentals, and automation relevant to cybersecurity.
+          </p>
         </div>
       </div>
-      <!-- Replace dashes with years/institution if you want to show them -->
     </section>
 
     <!-- Languages -->
     <h2 id="languages" class="section">Languages</h2>
     <section class="card">
       <div class="tags">
-        <!-- Replace or add your languages -->
         <span class="tag">English</span>
         <span class="tag">Telugu</span>
         <span class="tag">Hindi</span>
-        <!-- <span class="tag">Telugu</span> <span class="tag">Hindi</span> -->
       </div>
     </section>
 
@@ -224,112 +325,136 @@
     <section class="grid">
       <!-- 1) Web App Security — XSS & SQL Injection -->
       <article class="card">
-        <h3>Web App Security — XSS & SQL Injection</h3>
-        <p>Hands-on penetration testing in a controlled lab using Burp Suite & SQLMap; aligned with OWASP Top 10.</p>
-        <div class="tags"><span class="tag">XSS</span><span class="tag">SQLi</span><span class="tag">Burp Suite</span><span class="tag">SQLMap</span><span class="tag">Kali</span></div>
+        <h3>Web App Security — XSS &amp; SQL Injection</h3>
+        <p>Hands-on penetration testing in a controlled lab using Burp Suite &amp; SQLMap; aligned with OWASP Top 10.</p>
+        <div class="tags">
+          <span class="tag">XSS</span><span class="tag">SQLi</span><span class="tag">Burp Suite</span>
+          <span class="tag">SQLMap</span><span class="tag">Kali</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/Web_App_Security_XSS_SQLi_Scenario.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/web-app-security-xss-sql-injection.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 2) Web App Penetration Testing — Vulnerability Assessment -->
+      <!-- 2) Web App Penetration Testing -->
       <article class="card">
         <h3>Web App Penetration Testing — Vulnerability Assessment</h3>
         <p>Identified SQLi, IDOR, file upload, and access control flaws; risk analysis and remediation (OWASP Top 10/PTES).</p>
-        <div class="tags"><span class="tag">OWASP Top 10</span><span class="tag">PTES</span><span class="tag">Burp Suite</span><span class="tag">Gobuster</span></div>
+        <div class="tags">
+          <span class="tag">OWASP Top 10</span><span class="tag">PTES</span><span class="tag">Burp Suite</span>
+          <span class="tag">Gobuster</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/Web_App_Penetration_Testing_Scenario.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/web-app-penetration-testing.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 3) AI Governance — Cognitive Bias (VIC Gov) -->
+      <!-- 3) AI Governance -->
       <article class="card">
         <h3>AI Governance for Public Sector — Cognitive Bias (VIC)</h3>
         <p>Debiasing techniques + ISO/IEC 38507 alignment for responsible AI in government; policy and assurance recommendations.</p>
-        <div class="tags"><span class="tag">ISO/IEC 38507</span><span class="tag">AI Assurance</span><span class="tag">Governance</span></div>
+        <div class="tags">
+          <span class="tag">ISO/IEC 38507</span><span class="tag">AI Assurance</span><span class="tag">Governance</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/AI_Governance_IT_Scenario.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/AI-IT-Governance-VIC-Gov.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 4) WA Government — IT Governance using ISO -->
+      <!-- 4) WA Government Governance -->
       <article class="card">
         <h3>WA Government — IT Governance using ISO Standards</h3>
-        <p>Mapped ISO/IEC 38500 & 27000-series to WA Auditor General’s findings; governance reforms and BCP/DR proposals.</p>
-        <div class="tags"><span class="tag">ISO/IEC 38500</span><span class="tag">ISO/IEC 27001</span><span class="tag">BCP/DR</span></div>
+        <p>Mapped ISO/IEC 38500 &amp; 27000-series to WA Auditor General’s findings; governance reforms and BCP/DR proposals.</p>
+        <div class="tags">
+          <span class="tag">ISO/IEC 38500</span><span class="tag">ISO/IEC 27001</span><span class="tag">BCP/DR</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/Report-18_State-GCC-Results-Report-2020-v2.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/Western-Australia-Gov-IT-Governance-ISO-38500-27000.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 5) Queensland ICT Governance — COBIT 2019 -->
+      <!-- 5) Queensland ICT Governance -->
       <article class="card">
         <h3>Queensland ICT Governance — COBIT 2019</h3>
         <p>Applied COBIT 2019 + Qld Treasury PAF to strengthen project assurance, benefits realisation, and dashboard integrity.</p>
-        <div class="tags"><span class="tag">COBIT 2019</span><span class="tag">Assurance</span><span class="tag">Benefits</span></div>
+        <div class="tags">
+          <span class="tag">COBIT 2019</span><span class="tag">Assurance</span><span class="tag">Benefits</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/summary-monitoring_and_managing_ict_projects_report_1-2018-19 (1).pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/Queensland-ICT-Governance-Cobit2019.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 6) Executive Briefing Note — Data Breach Risk Analysis -->
+      <!-- 6) Executive Briefing Note -->
       <article class="card">
         <h3>Executive Briefing Note — Data Breach Risk Analysis</h3>
         <p>Concise, executive-ready note on a major breach; evidence-based recommendations (NIST CSF, ISO 31000, ACSC/OAIC).</p>
-        <div class="tags"><span class="tag">NIST CSF</span><span class="tag">ISO 31000</span><span class="tag">ACSC/OAIC</span></div>
+        <div class="tags">
+          <span class="tag">NIST CSF</span><span class="tag">ISO 31000</span><span class="tag">ACSC/OAIC</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/Executive-Briefing-Note-Data-Breach-Risk-Analysis.pdf" target="_blank" rel="noopener">Scenario / Report PDF</a>
         </div>
       </article>
 
-      <!-- 7) Cybersecurity Risk Management — Cheese Pty Ltd -->
+      <!-- 7) Risk Management -->
       <article class="card">
         <h3>Cybersecurity Risk Management — Cheese Pty Ltd</h3>
         <p>Risk assessment, secure network architecture, and controls aligned with NIST CSF/ISO 31000 for an SME.</p>
-        <div class="tags"><span class="tag">Risk Assessment</span><span class="tag">NIST CSF</span><span class="tag">ISO 31000</span></div>
+        <div class="tags">
+          <span class="tag">Risk Assessment</span><span class="tag">NIST CSF</span><span class="tag">ISO 31000</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/Cybersecurity_Risk_Management_Strategy_Cheese_PtyLtd.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/Cybersecurity-Risk-Management-Strategy-Cheese-Pty-Ltd.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 8) Digital Risk Management — Energy (Offshore Wind) -->
+      <!-- 8) Digital Risk -->
       <article class="card">
         <h3>Digital Risk Management — Energy (Offshore Wind)</h3>
-        <p>Threat model & mitigation plan for cyber attacks on renewable energy infrastructure; governance and controls.</p>
-        <div class="tags"><span class="tag">Critical Infrastructure</span><span class="tag">Threat Modeling</span><span class="tag">Risk</span></div>
+        <p>Threat model &amp; mitigation plan for cyber attacks on renewable energy infrastructure; governance and controls.</p>
+        <div class="tags">
+          <span class="tag">Critical Infrastructure</span><span class="tag">Threat Modeling</span><span class="tag">Risk</span>
+        </div>
         <div class="actions">
           <a href="/assets/projects/Digital Risk Management - Cyber attacks on renewable energy resources.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/Cybersecurity_Risk_Management_Offshore_Wind_Farm.pdf" target="_blank" rel="noopener">Report PDF</a>
         </div>
       </article>
 
-      <!-- 9) Database (featured wide card) -->
+      <!-- 9) Database -->
       <article class="card feature">
         <h3>COVID-19 Vaccination Database (SQLite)</h3>
-        <p>Designed 3NF schema from OWID CSVs; implemented in SQLite; analytical SQL queries. Includes schema, queries, and (optional) DB download.</p>
-        <div class="tags"><span class="tag">SQLite</span><span class="tag">SQL</span><span class="tag">ERD</span><span class="tag">1NF–3NF</span></div>
+        <p>
+          Designed 3NF schema from OWID CSVs; implemented in SQLite; analytical SQL queries.
+          Includes schema, queries, and (optional) DB download.
+        </p>
+        <div class="tags">
+          <span class="tag">SQLite</span><span class="tag">SQL</span>
+          <span class="tag">ERD</span><span class="tag">1NF–3NF</span>
+        </div>
         <div class="actions">
-          <!-- If you added these files under /assets/projects/database/, keep these links; otherwise adjust paths -->
           <a href="/assets/projects/COVID19_Vaccination_Database_Scenario.pdf" target="_blank" rel="noopener">Scenario PDF</a>
           <a href="/assets/projects/database/Database.sql" target="_blank" rel="noopener">Schema (SQL)</a>
           <a href="/assets/projects/database/Queries.sql" target="_blank" rel="noopener">Queries (SQL)</a>
-
-          <!-- Direct links to GitHub repo -->
           <a href="https://github.com/Saiteja-02/covid-vaccination-database-project/blob/main/UPLOADED_FILES%202/Vaccinations.db" target="_blank" rel="noopener">Download DB</a>
           <a href="https://github.com/Saiteja-02/covid-vaccination-database-project/tree/main/updated%20csv%20files" target="_blank" rel="noopener">View CSV Files</a>
         </div>
       </article>
 
-            <!-- 10) AWS VPC — Automated Deployment -->
+      <!-- 10) AWS VPC -->
       <article class="card">
         <h3>AWS VPC — Automated Deployment with Terraform</h3>
-        <p>Automated deployment of secure AWS Virtual Private Cloud (VPC) infrastructure using Terraform (IaC). Includes subnets, route tables, internet gateways, and outputs for modular reuse.</p>
+        <p>
+          Automated deployment of secure AWS Virtual Private Cloud (VPC) infrastructure using Terraform (IaC).
+          Includes subnets, route tables, internet gateways, and outputs for modular reuse.
+        </p>
         <div class="tags">
           <span class="tag">AWS</span><span class="tag">Terraform</span>
           <span class="tag">VPC</span><span class="tag">IaC</span>
@@ -340,19 +465,19 @@
           <a href="https://github.com/Saiteja-02/VPC" target="_blank" rel="noopener">GitHub Repo</a>
         </div>
       </article>
-
     </section>
 
     <!-- Contact -->
     <section id="contact" style="margin-top:28px">
       <h2 class="section">Contact</h2>
-      <p class="muted">Open to roles in cybersecurity, cloud/Kubernetes, and IT/AI governance.</p>
+      <p class="muted">Open to roles in cybersecurity, cloud security, and IT/AI governance.</p>
       <p>
         <a href="mailto:Battulasaiteja2@gmail.com">Battulasaiteja2@gmail.com</a> ·
         <a href="https://www.linkedin.com/in/bathulasaiteja2/" target="_blank" rel="noopener">LinkedIn</a> ·
         <a href="https://github.com/Saiteja-02" target="_blank" rel="noopener">GitHub</a>
       </p>
     </section>
+
   </main>
 
   <footer>
